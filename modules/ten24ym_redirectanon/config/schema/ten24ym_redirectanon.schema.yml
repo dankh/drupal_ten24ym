@@ -1,0 +1,7 @@
+ten24ym_redirectanon.settings:
+  type: config_object
+  label: 'Redirect anonymous users'
+  mapping:
+    path:
+      type: string
+      label: "Redirect path"

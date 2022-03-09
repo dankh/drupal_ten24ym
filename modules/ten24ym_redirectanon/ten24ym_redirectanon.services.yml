@@ -1,0 +1,6 @@
+services:
+  ten24ym_redirectanon.event_subscriber:
+    class: Drupal\ten24ym_redirectanon\EventSubscriber\Ten24ymRedirectAnonSubscriber
+    arguments: ['@messenger']
+    tags:
+      - { name: event_subscriber }

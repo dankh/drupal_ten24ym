@@ -1,0 +1,4 @@
+administer ten24ym configuration:
+  title: 'Administer ten24ym configuration'
+  description: 'Optional description.'
+  restrict access: true

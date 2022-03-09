@@ -1,0 +1,53 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for ten24ym module.
+ *
+ * @DCG
+ * This file is no longer required in Drupal 8.
+ * @see https://www.drupal.org/node/2217931
+ */
+
+/**
+ * Implements hook_form_alter().
+ */
+function ten24ym_form_alter(
+  &$form,
+  \Drupal\Core\Form\FormStateInterface $form_state,
+  $form_id
+) {
+  // Debug form ids.
+  // dpm($form_id);
+}
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter().
+ *
+ * Set default uri for links to <none>.
+ */
+function ten24ym_form_menu_link_content_menu_link_content_form_alter(
+  &$form,
+  \Drupal\Core\Form\FormStateInterface $form_state,
+  $form_id
+) {
+  $default_value = &$form['link']['widget'][0]['uri']['#default_value'];
+  if (empty($default_value)) {
+    $default_value = "<none>";
+  }
+}
+
+/**
+ * Change CKEditor height.
+ *
+ * @param array $settings
+ *
+ * @return void
+ */
+function ckeditor_change_height_editor_js_settings_alter(array &$settings) {
+  foreach (array_keys($settings['editor']['formats']) as $text_format_id) {
+    if ($settings['editor']['formats'][$text_format_id]['editor'] === 'ckeditor') {
+      $settings['editor']['formats'][$text_format_id]['editorSettings']['height'] = '350px';
+    }
+  }
+}

@@ -1,0 +1,5 @@
+ten24ym_redirectanon.settings:
+  title: 'Redirect anonymous users'
+  description: 'Configure redirect anonymous users.'
+  route_name: ten24ym_redirectanon.settings_form
+  parent: system.admin_config_system

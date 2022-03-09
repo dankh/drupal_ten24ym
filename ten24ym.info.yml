@@ -1,0 +1,5 @@
+name: ten24ym
+type: module
+description: Various Drupal custom enhancements that are not enough for dedicated module.
+package: Ten24y
+core_version_requirement: ^9

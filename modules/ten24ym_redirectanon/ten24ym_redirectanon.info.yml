@@ -1,0 +1,5 @@
+name: 'Redirect anonymous users'
+description: 'Redirect anonymous users to custom path.'
+core_version_requirement: ^9
+package: Ten24y
+type: module

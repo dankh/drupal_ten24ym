@@ -1,0 +1,7 @@
+ten24ym_redirectanon.settings_form:
+  path: '/admin/config/system/ten24ym-redirectanon/config'
+  defaults:
+    _title: 'Redirect anonymous users'
+    _form: 'Drupal\ten24ym_redirectanon\Form\SettingsForm'
+  requirements:
+    _permission: 'administer site configuration'
